@@ -323,7 +323,7 @@ class MemberDirectoryService:
 
 
 # FastAPI application
-app = FastAPI()
+app = FastAPI(title="Anand Vihar Member Directory API", version="1.0.0")
 
 # Initialize service == title="Anand Vihar Member Directory API", version="1.0.0"
 member_service = MemberDirectoryService()
