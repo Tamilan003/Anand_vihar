@@ -324,6 +324,9 @@ class MemberDirectoryService:
 
 # FastAPI application
 app = FastAPI(title="Anand Vihar Member Directory API", version="1.0.0")
+
+# Initialize service
+member_service = MemberDirectoryService()
 from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
@@ -333,9 +336,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# Initialize service
-member_service = MemberDirectoryService()
-
 
 @app.post("/api/member-directory/save")
 async def save_member_directory(member_data: MemberDirectoryRequest):
