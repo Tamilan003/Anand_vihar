@@ -323,9 +323,9 @@ class MemberDirectoryService:
 
 
 # FastAPI application
-app = FastAPI(title="Anand Vihar Member Directory API", version="1.0.0")
+app = FastAPI()
 
-# Initialize service
+# Initialize service == title="Anand Vihar Member Directory API", version="1.0.0"
 member_service = MemberDirectoryService()
 from fastapi.middleware.cors import CORSMiddleware
 
