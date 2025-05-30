@@ -328,11 +328,16 @@ app = FastAPI(title="Anand Vihar Member Directory API", version="1.0.0")
 # Initialize service == title="Anand Vihar Member Directory API", version="1.0.0"
 member_service = MemberDirectoryService()
 from fastapi.middleware.cors import CORSMiddleware
-
+origins = [
+    "https://phoneorder.co",
+    "http://phoneorder.co",
+    "http://localhost:3000",
+    "https://anand-vihar.onrender.com",# Optional, for local dev
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://anand-vihar.onrender.com"],  # Or ["http://localhost:3000"] if React
-    allow_credentials=True,
+    allow_origins=origins,  # Or ["http://localhost:3000"] if React
+    allow_credentials=True, 
     allow_methods=["*"],
     allow_headers=["*"],
 )
