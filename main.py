@@ -332,6 +332,7 @@ origins = [
     "https://phoneorder.co",
     "http://phoneorder.co",
     "http://localhost:3000",
+    "https://localhost:3000",
     "https://anand-vihar.onrender.com",# Optional, for local dev
 ]
 app.add_middleware(
